@@ -122,7 +122,7 @@ program and restart it for the changes to take effect. This is something I
 hope to improve in future versions of the program, but for now, lets keep it
 simple.
 
-When SecureCHatAnywhere is launched for the first time it will create the file
+When SecureChatAnywhere is launched for the first time it will create the file
 SecureChatAnywhere.keys.txt (if it is missing) in the same directory as the
 program is residing, and generate three random keys; key01, key02 and key03.
 The keys are created using the
