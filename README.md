@@ -175,9 +175,9 @@ About - Show program information.
 #### Middle pane buttons:
 
 <<- Encrypt - Encrypts the current plaintext with the selected key and copies
-the output to clipboard.
+the output to clipboard.  
 Decrypt ->> - Decrypts the current ciphertext with the selected key and copies
-the output to clipboard.
+the output to clipboard.  
 <<- Clear - Clears the left pane with plaintext.  
 Clear ->> - Clears the right pane with ciphertext.  
 |"Key selector"| - When clicked or held, this button lets you select the
