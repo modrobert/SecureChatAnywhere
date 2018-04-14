@@ -227,8 +227,8 @@ Q: Isn't this project a bit paranoid? Point being, many existing chat systems
 are secure even if you choose not to trust them.
 
 A: If you aren't in control of the keys you have no security.
-   
-   
+<br>
+<br>
 Q: After starting the program I noticed there are three keys to choose from,
 what are they used for?
 
@@ -240,8 +240,8 @@ SecureRandom but is specifically intended for cryptographic keys. You can add
 your own keys to the SecureChatAnywhere.keys.txt file, or edit/remove existing
 ones. The keys provided are just added to get you started and familiar with the
 key format. Check the [Usage] (#Usage) section for more information.
-   
-   
+<br>
+<br>
 Q: Why aren't you using AES-256 instead of AES-128?
 
 A: Mainly because some Java runtime environments impose restrictions on AES-256
@@ -249,8 +249,8 @@ usage and I wanted SecureChatAnywhere to be as compatible as possible across
 different hardware/OS platforms. AES-128 is still considered secure with 2^128
 possible keys to bruteforce, even preferred by some due to better key schedule
 design.
-  
-  
+<br>
+<br>
 Q: Don't store keys in plaintext, this is bad practice, shame on you.
 
 A: Is that even a question? Anyway, the design idea is that the user decides
@@ -263,8 +263,8 @@ is compromised by malware or other means then no encryption will protect since
 screen, mouse and keyboard events can be intercepted. Using a hardcoded key
 hidden in the program to encrypt the keys in the key file is equally futile
 since the source code is provided according to GPLv3.
-  
-  
+<br>
+<br>
 Q: Why don't you encrypt the key file with AES using a password hashing
 algorithm such as PBKDF2?
 
@@ -276,21 +276,21 @@ suggest using tools designed specifically for this purpose, such as VeraCrypt,
 LUKS or TrueCrypt with file container and disk encryption support, then both
 the program and key file can be stored safely together while providing
 plausible deniability. 
-  
-  
+<br>
+<br>
 Q: Why not use [insert existing tool here] instead?
 
 A: I wanted to explore a new approach, in an attempt to secure any kind of text
 based communication tools found online.
-  
-  
+<br>
+<br>
 Q: The GUI looks like shit, what is that, plain AWT?
 
 A: Yes, ancient Java AWT, in the original spirit of "write once, run anywhere"
 and keeping the program native with no external library dependencies besides
 the JRE.
-  
-  
+<br>
+<br>
 Q: Are you planning on porting this to Android and iOS?
 
 A: Yes, but it's a long-term project as it involves hardware. These smartphone
