@@ -208,7 +208,7 @@ directory as the program. Keys can be added, deleted, and edited as needed
 using any text editor or tool the user deem fit.
 
 If you are interested the encryption and decryption used in SecureChatAnywhere
-can be tested with the supplied Python script 'aes128_cbc_pkcs5_base64.py'.
+can be tested with the supplied Python script [aes128_cbc_pkcs5_base64.py](https://github.com/modrobert/SecureChatAnywhere/blob/master/aes128_cbc_pkcs5_base64.py).
 This script is not a complete solution, just hardcoded "proof of concept" code
 to test the encryption methods used.
 
