@@ -156,13 +156,16 @@ will be lost.
 Action ->
  
 Encrypt - Encrypts the current plaintext with the selected key and copies the
-output to the clipboard.  
+output to clipboard.  
 Decypt - Decrypts the current ciphertext with the selected key and copies the
-output to the clipboard.  
+output to clipboard.  
 Clear - Clears both left and right window panes.  
 Generate key - This will create a random AES 128 bit key using the [KeyGenerator](https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java.  
-List keys - Lists current keys as parsed from SecureChatAnywhere.keys.txt during program launch.  
-Edit keyfile - Will use the desktop function to open the SecureChatAnywhere.keys.txt file using the OS associated editor selected for the txt file type.  
+List keys - Lists current keys as parsed from SecureChatAnywhere.keys.txt
+during program launch.  
+Edit keyfile - Will use the desktop function to open the
+SecureChatAnywhere.keys.txt file using the OS associated editor selected for
+the txt file type.  
 Quit - Quits the program.  
  
 Help ->
@@ -171,8 +174,10 @@ About - Show program information.
 
 #### Middle pane buttons:
 
-<<- Encrypt - Encrypts the current plaintext with the selected key.  
-Decrypt ->> - Decrypts the current ciphertext with the selected key.  
+<<- Encrypt - Encrypts the current plaintext with the selected key and copies
+the output to clipboard.
+Decrypt ->> - Decrypts the current ciphertext with the selected key and copies
+the output to clipboard.
 <<- Clear - Clears the left pane with plaintext.  
 Clear ->> - Clears the right pane with ciphertext.  
 |"Key selector"| - When clicked or held, this button lets you select the
@@ -208,7 +213,7 @@ directory as the program. Keys can be added, deleted, and edited as needed
 using any text editor or tool the user deem fit.
 
 If you are interested the encryption and decryption used in SecureChatAnywhere
-can be tested with the supplied Python script [aes128_cbc_pkcs5_base64.py](https://github.com/modrobert/SecureChatAnywhere/blob/master/aes128_cbc_pkcs5_base64.py).
+it can be tested with the supplied Python script [aes128_cbc_pkcs5_base64.py](https://github.com/modrobert/SecureChatAnywhere/blob/master/aes128_cbc_pkcs5_base64.py).
 This script is not a complete solution, just hardcoded "proof of concept" code
 to test the encryption methods used.
 
