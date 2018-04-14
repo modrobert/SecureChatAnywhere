@@ -351,7 +351,7 @@ with no dependencies besides native JRE, so keep that in mind.
 
 ### License
 
-SecureChatAnywhere encrypts/decrypts chat messages with AES-128/CBC.
+SecureChatAnywhere encrypts/decrypts chat messages with AES-128/CBC.  
 Copyright (C) 2018  Robert V. <modrobert@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
