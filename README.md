@@ -1,6 +1,6 @@
 # SecureChatAnywhere
 
-![SecureChatAnywhere](http://https://github.com/modrobert/SecureChatAnywhere/SecureChatAnywhere_main.gif)
+![SecureChatAnywhere](https://raw.githubusercontent.com/modrobert/SecureChatAnywhere/master/SecureChatAnywhere_main.gif)
  
 ## Encrypts/decrypts chat messages with AES-128/CBC.
 
@@ -154,29 +154,29 @@ will be lost.
 ##### Menu functions:
 
 Action ->
-
+ 
 Encrypt - Encrypts the current plaintext with the selected key and copies the
-output to the clipboard.
+output to the clipboard. 
 Decypt - Decrypts the current ciphertext with the selected key and copies the
-output to the clipboard.
-Clear - Clears both left and right window panes.
-Generate key - This will create a random AES 128 bit key using the [KeyGenerator] (https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java.
-List keys - Lists current keys as parsed from SecureChatAnywhere.keys.txt during program launch.
-Edit keyfile - Will use the desktop function to open the SecureChatAnywhere.keys.txt file using the OS associated editor selected for the txt file type.
-Quit - Quits the program.
-
+output to the clipboard. 
+Clear - Clears both left and right window panes. 
+Generate key - This will create a random AES 128 bit key using the [KeyGenerator] (https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java. 
+List keys - Lists current keys as parsed from SecureChatAnywhere.keys.txt during program launch. 
+Edit keyfile - Will use the desktop function to open the SecureChatAnywhere.keys.txt file using the OS associated editor selected for the txt file type. 
+Quit - Quits the program. 
+ 
 Help ->
-
-About - Show program information.
+ 
+About - Show program information. 
 
 ##### Middle pane buttons:
 
-<<- Encrypt - Encrypts the current plaintext with the selected key.
-Decrypt ->> - Decrypts the current ciphertext with the selected key.
-<<- Clear - Clears the left pane with plaintext.
-Clear ->> - Clears the right pane with ciphertext.
+<<- Encrypt - Encrypts the current plaintext with the selected key. 
+Decrypt ->> - Decrypts the current ciphertext with the selected key. 
+<<- Clear - Clears the left pane with plaintext. 
+Clear ->> - Clears the right pane with ciphertext. 
 |"Key selector"| - When clicked or held, this button lets you select the
-key used when encrypting and decrypting.
+key used when encrypting and decrypting. 
 
 ---
 
