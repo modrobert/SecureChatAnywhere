@@ -244,7 +244,7 @@ as the program. The keys are created using the
 SecureRandom but is specifically intended for cryptographic keys. You can add
 your own keys to the SecureChatAnywhere.keys.txt file, or edit/remove existing
 ones. The keys provided are just added to get you started and familiar with the
-key format. Check the [Usage](#Usage) section for more information.
+key format. Check the "Usage" section for more information.
 <br>
 <br>
 Q: Why aren't you using AES-256 instead of AES-128?
