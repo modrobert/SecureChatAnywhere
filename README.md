@@ -9,7 +9,7 @@
 
 ---
  
-#### Features
+### Features
 
 * AES-128/CBC encryption with Base64 output
 * Works with any text based apps and online services
@@ -22,7 +22,7 @@
 
 ---
 
-#### Description
+### Description
 
 SecureChatAnywhere is a lightweight program written in Java with the purpose of 
 making it easy to encrypt and decrypt any kind of text messages using
@@ -58,7 +58,7 @@ For example (but not limited to):
 
 ---
 
-#### Installation
+### Installation
 
 Create a directory, unzip the release and copy the included 
 SecureChatAnywhere_beta.jar to it, along with the startup script (.sh) or batch
@@ -75,9 +75,9 @@ results where the plaintext can't be read.
 
 ---
 
-#### Usage
+### Usage
 
-##### General:
+#### General:
 
 The basic concept here is to copy & paste text as conveniently as possible, 
 which is still an inefficient way to communicate. This is the reason
@@ -85,9 +85,9 @@ SecureChatAnywhere is only suitable for the messages you really want to keep
 private. On the other hand, personally I think this is a small price to pay in
 order to stay in control of the keys and being able to encrypt messages.
 
-##### Key handling:
+#### Key handling:
 
-SecureChatAnywhere uses AES-128/CBC which is [symmetric encryption] (https://en.wikipedia.org/wiki/Symmetric-key_algorithm) with a cryptographic
+SecureChatAnywhere uses AES-128/CBC which is [symmetric encryption](https://en.wikipedia.org/wiki/Symmetric-key_algorithm) with a cryptographic
 key, you can create the 128 bit key yourself from 32 chars of hexadecimal
 number or use the built-in "Generate key" to call a secure random method in
 Java which was designed for the purpose of generating random keys for AES
@@ -126,7 +126,7 @@ When SecureCHatAnywhere is launched for the first time it will create the file
 SecureChatAnywhere.keys.txt (if it is missing) in the same directory as the
 program is residing, and generate three random keys; key01, key02 and key03.
 The keys are created using the
-[KeyGenerator] (https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java which provides random data similar to
+[KeyGenerator](https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java which provides random data similar to
 SecureRandom but is specifically intended for cryptographic keys. You can add
 your own keys to the SecureChatAnywhere.keys.txt file, or edit/remove existing
 ones. The keys provided are just added to get you started and familiar with the
@@ -142,7 +142,7 @@ to get right, it's easy to do mistakes which compromises the key, but it's even
 worse when you have no control of the keys at all, which is true for most of
 the current chat/message systems online. 
 
-##### The graphical user interface (GUI):
+#### The graphical user interface (GUI):
 
 The GUI layout is designed as follows; all plaintext (decrypted) data is
 handled in the left pane window, the ciphertext (encrypted) data is handled in
@@ -151,7 +151,7 @@ logged here including the plaintext and ciphertext generated. Note that this
 is not logged to file, when quitting program any information in the log window
 will be lost.
 
-##### Menu functions:
+#### Menu functions:
 
 Action ->
  
@@ -160,7 +160,7 @@ output to the clipboard.
 Decypt - Decrypts the current ciphertext with the selected key and copies the
 output to the clipboard.  
 Clear - Clears both left and right window panes.  
-Generate key - This will create a random AES 128 bit key using the [KeyGenerator] (https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java.  
+Generate key - This will create a random AES 128 bit key using the [KeyGenerator](https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java.  
 List keys - Lists current keys as parsed from SecureChatAnywhere.keys.txt during program launch.  
 Edit keyfile - Will use the desktop function to open the SecureChatAnywhere.keys.txt file using the OS associated editor selected for the txt file type.  
 Quit - Quits the program.  
@@ -169,7 +169,7 @@ Help ->
  
 About - Show program information. 
 
-##### Middle pane buttons:
+#### Middle pane buttons:
 
 <<- Encrypt - Encrypts the current plaintext with the selected key.  
 Decrypt ->> - Decrypts the current ciphertext with the selected key.  
@@ -180,7 +180,7 @@ key used when encrypting and decrypting.
 
 ---
 
-#### Security
+### Security
 
 The idea is to be able to use any text based communication service on internet
 regardless if trusted or not and add secure encryption on top of that without
@@ -221,27 +221,27 @@ secure.
 
 ---
 
-#### FAQ
+### FAQ
 
 Q: Isn't this project a bit paranoid? Point being, many existing chat systems
 are secure even if you choose not to trust them.
 
 A: If you aren't in control of the keys you have no security.
-
-
+   
+   
 Q: After starting the program I noticed there are three keys to choose from,
 what are they used for?
 
 A: These keys are created the first time the program is launched and stored in
 a file called SecureChatAnywhere.keys.txt which resides in the same directory
 as the program. The keys are created using the
-[KeyGenerator] (https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java which provides random data similar to
+[KeyGenerator](https://docs.oracle.com/javase/8/docs/api/javax/crypto/class-use/KeyGenerator.html) class in Java which provides random data similar to
 SecureRandom but is specifically intended for cryptographic keys. You can add
 your own keys to the SecureChatAnywhere.keys.txt file, or edit/remove existing
 ones. The keys provided are just added to get you started and familiar with the
 key format. Check the [Usage] (#Usage) section for more information.
-
-
+   
+   
 Q: Why aren't you using AES-256 instead of AES-128?
 
 A: Mainly because some Java runtime environments impose restrictions on AES-256
@@ -249,8 +249,8 @@ usage and I wanted SecureChatAnywhere to be as compatible as possible across
 different hardware/OS platforms. AES-128 is still considered secure with 2^128
 possible keys to bruteforce, even preferred by some due to better key schedule
 design.
-
-
+  
+  
 Q: Don't store keys in plaintext, this is bad practice, shame on you.
 
 A: Is that even a question? Anyway, the design idea is that the user decides
@@ -263,8 +263,8 @@ is compromised by malware or other means then no encryption will protect since
 screen, mouse and keyboard events can be intercepted. Using a hardcoded key
 hidden in the program to encrypt the keys in the key file is equally futile
 since the source code is provided according to GPLv3.
-
-
+  
+  
 Q: Why don't you encrypt the key file with AES using a password hashing
 algorithm such as PBKDF2?
 
@@ -276,21 +276,21 @@ suggest using tools designed specifically for this purpose, such as VeraCrypt,
 LUKS or TrueCrypt with file container and disk encryption support, then both
 the program and key file can be stored safely together while providing
 plausible deniability. 
-
-
+  
+  
 Q: Why not use [insert existing tool here] instead?
 
 A: I wanted to explore a new approach, in an attempt to secure any kind of text
 based communication tools found online.
-
-
+  
+  
 Q: The GUI looks like shit, what is that, plain AWT?
 
 A: Yes, ancient Java AWT, in the original spirit of "write once, run anywhere"
 and keeping the program native with no external library dependencies besides
 the JRE.
-
-
+  
+  
 Q: Are you planning on porting this to Android and iOS?
 
 A: Yes, but it's a long-term project as it involves hardware. These smartphone
@@ -304,7 +304,7 @@ hardware design.
 
 ---
 
-#### Background:
+### Background:
     
 There are plenty of existing chat programs/services out there claiming to be
 secure where obfuscating the user keys is common practice, keeping the users 
@@ -324,7 +324,7 @@ AES-128/CBC which runs on any desktop platform with Java (JRE) installed.
 
 ---
 
-#### Contribute
+### Contribute
 
 If you wish to contribute to this project by donating then you can do so via
 Bitcoin or PayPal.
@@ -344,7 +344,7 @@ with no dependencies besides native JRE, so keep that in mind.
 
 ---
 
-#### License
+### License
 
 SecureChatAnywhere encrypts/decrypts chat messages with AES-128/CBC.
 Copyright (C) 2018  Robert V. <modrobert@gmail.com>
