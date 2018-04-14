@@ -205,7 +205,7 @@ this program and key file on an SD card, USB stick or an encrypted hard drive
 it is his/her decision. Again, the user is in full control of the software and
 keys used. 
 
-SecureChatAnywhered does not provide any security measures on the computer
+SecureChatAnywhere does not provide any security measures on the computer
 (localhost) where the user run the program, there are no attempts to obfuscate
 the keys in memory while executing or on disk. The keys are stored in plain
 text hex format in the 'SecureChatAnywhere.keys.txt' file residing in the same
