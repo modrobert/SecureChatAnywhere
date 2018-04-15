@@ -73,6 +73,15 @@ file encoding used differs from UTF-8. This important because decrypting
 ciphertext with the wrong character encoding can result in unpredictable
 results where the plaintext can't be read.
 
+If you wish to compile and run the program yourself instead of using the
+precompiled jar file, then use these commands:
+
+Compile:
+javac SecureChatAnywhere.java
+
+Run:
+java -Dfile.encoding=UTF-8 SecureChatAnywhere
+
 ---
 
 ### Usage
