@@ -74,7 +74,7 @@ ciphertext with the wrong character encoding can result in unpredictable
 results where the plaintext can't be read.
 
 If you wish to compile and run the program yourself instead of using the
-precompiled jar file, then use these commands:
+precompiled jar file, then use the following commands.
 
 Compile:  
 javac SecureChatAnywhere.java
