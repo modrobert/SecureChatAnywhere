@@ -76,10 +76,10 @@ results where the plaintext can't be read.
 If you wish to compile and run the program yourself instead of using the
 precompiled jar file, then use these commands:
 
-Compile:
+Compile:  
 javac SecureChatAnywhere.java
 
-Run:
+Run:  
 java -Dfile.encoding=UTF-8 SecureChatAnywhere
 
 ---
