@@ -46,6 +46,7 @@ For example (but not limited to):
 * Gmail
 * Hotmail (Outlook)
 * Twitter
+* Google Plus
 * Facebook
 * Skype
 * Line
@@ -318,7 +319,7 @@ hardware design.
 
 ---
 
-### Background:
+### Background
     
 There are plenty of existing chat programs/services out there claiming to be
 secure where obfuscating the user keys is common practice, keeping the users 
