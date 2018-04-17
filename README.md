@@ -161,6 +161,9 @@ logged here including the plaintext and ciphertext generated. Note that this
 is not logged to file, when quitting program any information in the log window
 will be lost.
 
+When pasting the ciphertext in Base64 format to be decrypted any spaces or line
+breaks are ignored.
+
 #### Menu functions:
 
 Action ->
