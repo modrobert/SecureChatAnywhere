@@ -56,6 +56,7 @@ For example (but not limited to):
 * Signal
 * IRC
 * Discord
+* Steam
 
 ---
 
