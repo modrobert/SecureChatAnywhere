@@ -196,6 +196,7 @@ the output to clipboard.
 Clear ->> - Clears the right pane with ciphertext.  
 |"Key selector"| - When clicked or held, this button lets you select the
 key used when encrypting and decrypting.  
+[ ] Copy to clipboard - When selected output is copied to clipboard.
 
 ---
 
