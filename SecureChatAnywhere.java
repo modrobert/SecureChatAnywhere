@@ -53,7 +53,7 @@ import java.io.*;
 public class SecureChatAnywhere {
 
     public static final String APP_VERSION =
-        "SecureChatAnywhere v0.97 Beta [AES-128/CBC]";
+        "SecureChatAnywhere v0.98 Beta [AES-128/CBC]";
     public static final String MAGIC_ID = "SCA-";
     private static final String KEY_FILE = "SecureChatAnywhere.keys.txt";
     private static final String KEY_WARNING =
@@ -83,6 +83,7 @@ public class SecureChatAnywhere {
     private Button decryptButton;
     private Button clearButtonDW;
     private Button clearButtonEW;
+    private Checkbox copyToClipBox;
     private Choice keys;
     private MenuItem aboutMenuItem;
     private MenuItem encryptMenuItem;
@@ -122,6 +123,8 @@ public class SecureChatAnywhere {
         clearButtonEW.setFont(new Font(
             "monospaced", Font.BOLD, FONT_SIZE_BUTTON));
         keys = new Choice();
+        copyToClipBox = new Checkbox("Copy to clipboard");
+        copyToClipBox.setState(true);
         keys.setFont(new Font("monospaced", Font.PLAIN, FONT_SIZE_CHOICE));
         encryptMenuItem = new MenuItem("Encrypt");
         decryptMenuItem = new MenuItem("Decrypt");
@@ -153,6 +156,7 @@ public class SecureChatAnywhere {
         p1.add(clearButtonDW);
         p1.add(clearButtonEW);
         p1.add(keys);
+        p1.add(copyToClipBox);
         frame.add(p1,BorderLayout.CENTER);
         
         MenuBar mb = new MenuBar();
@@ -223,6 +227,7 @@ public class SecureChatAnywhere {
         decryptButton.addActionListener(new DecryptHandler());
         clearButtonDW.addActionListener(new ClearHandlerDW());
         clearButtonEW.addActionListener(new ClearHandlerEW());
+        copyToClipBox.addItemListener(new copyToClipBoxHandler());
         encryptMenuItem.addActionListener(new EncryptHandler());
         decryptMenuItem.addActionListener(new DecryptHandler());
         clearMenuItem.addActionListener(new ClearHandler());
@@ -334,16 +339,22 @@ public class SecureChatAnywhere {
             output.append("Plaintext:\n" + text + "\n");
             String strCipherTextFormatted = insertPeriodically(
                 MAGIC_ID + strCipherText, "\n", BASE64_WIDTH);
-            output.append("Ciphertext (copied to clipboard):\n" +
-                strCipherTextFormatted + "\n");
             decr.setText(" ");
             decr.setText("");
             decr.repaint();
             decr.append(strCipherTextFormatted);
-            // copy to clipboard
-            StringSelection sel = new StringSelection(strCipherTextFormatted);
-            Clipboard cb = Toolkit.getDefaultToolkit().getSystemClipboard();
-            cb.setContents(sel, sel);
+            if (copyToClipBox.getState()) {
+                // copy to clipboard
+                StringSelection sel =
+                    new StringSelection(strCipherTextFormatted);
+                Clipboard cb =
+                    Toolkit.getDefaultToolkit().getSystemClipboard();
+                cb.setContents(sel, sel);
+                output.append("Ciphertext (copied to clipboard):\n" +
+                    strCipherTextFormatted + "\n");
+            } else {
+                output.append("Ciphertext:\n" + strCipherTextFormatted + "\n");
+            }
             output.setCaretPosition(output.getText().length());
             output.repaint();
         } else {
@@ -386,13 +397,17 @@ public class SecureChatAnywhere {
                 encr.setText("");
                 encr.repaint();
                 encr.append(decText);
-                // copy to clipboard
-                StringSelection sel = new StringSelection(decText);
-                Clipboard cb =
-                    Toolkit.getDefaultToolkit().getSystemClipboard();
-                cb.setContents(sel, sel);
-                output.append("Plaintext (copied to clipboard):\n" + decText +
-                    "\n");
+                if (copyToClipBox.getState()) {
+                    // copy to clipboard
+                    StringSelection sel = new StringSelection(decText);
+                    Clipboard cb =
+                        Toolkit.getDefaultToolkit().getSystemClipboard();
+                    cb.setContents(sel, sel);
+                    output.append("Plaintext (copied to clipboard):\n" +
+                         decText + "\n");
+                } else {
+                    output.append("Plaintext:\n" + decText + "\n");
+                }
                 output.setCaretPosition(output.getText().length());
                 output.repaint();
 
@@ -414,6 +429,12 @@ public class SecureChatAnywhere {
             }
             output.setCaretPosition(output.getText().length());
             output.repaint();
+        }
+    }
+
+    private class copyToClipBoxHandler implements ItemListener {
+        public void itemStateChanged(ItemEvent ie) {
+            copyToClipBox.repaint();      
         }
     }
 
@@ -561,7 +582,7 @@ public class SecureChatAnywhere {
             add(b,BorderLayout.PAGE_END);
             pack();
             b.addActionListener(this);
-            }
+        }
         // closes itself when the close button is pushed
         public void actionPerformed(ActionEvent e) {
             setVisible(false);
