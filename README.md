@@ -62,6 +62,8 @@ For example (but not limited to):
 
 ### Installation
 
+Download: https://github.com/modrobert/SecureChatAnywhere/releases
+
 Create a directory, unzip the release and copy the included 
 SecureChatAnywhere_beta.jar to it, along with the startup script (.sh) or batch
 file (.bat) for your operating system. If you are not using a startup script
