@@ -215,8 +215,8 @@ this is due to the primary goals; to isolate and give the user full control of
 handling and storing the encryption keys used with this program.
 
 The conclusion is that this can be as secure as the user wants it to be. If the
-user wants to share his/her key on a piece paper hand delivered in person then
-so be it, if the user choose a less secure method such as sending the key
+user wants to share his/her key on a piece of paper hand delivered in person
+then so be it, if the user choose a less secure method such as sending the key
 through a trusted internet service then so be it. If the user decides to store
 this program and key file on an SD card, USB stick or an encrypted hard drive
 it is his/her decision. Again, the user is in full control of the software and
