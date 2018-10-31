@@ -351,8 +351,8 @@ AES-128/CBC which runs on any desktop platform with Java (JRE) installed.
 If you wish to contribute to this project by donating then you can do so via
 Bitcoin, Litecoin, Bitcoin Cash (bcash)  or PayPal.
 
-Bitcoin: 1LdBPjasAMLSBUEMF4w4AGuyPBBTtDZ92H
-Litecoin: Ld8dHjjh5YGXTiWrP3eenNTDXqB5pYpPqb
+Bitcoin: 1LdBPjasAMLSBUEMF4w4AGuyPBBTtDZ92H<br>
+Litecoin: Ld8dHjjh5YGXTiWrP3eenNTDXqB5pYpPqb<br>
 Bitcoin Cash (bcash): 1E2juHw762hCKpPmJpiBaRaiefgsTqsqeZ
 
 PayPal: https://paypal.me/modrobert
