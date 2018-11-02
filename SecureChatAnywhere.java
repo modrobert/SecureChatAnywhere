@@ -573,7 +573,7 @@ public class SecureChatAnywhere {
             a.add(new Label("Free software licensed under GPLv3."));
             a.add(new Label("Donate Bitcoin: "));
             TextField bitcoin = new TextField(
-                "33ShPNJkT3PGegKdJiXGMMpkVyekcMaHDF", 34);
+                "1LdBPjasAMLSBUEMF4w4AGuyPBBTtDZ92H", 34);
             bitcoin.setEditable(false);
             a.add(bitcoin);
             add(a,BorderLayout.CENTER);
