@@ -1,3 +1,5 @@
+#!/usr/bin/env python2
+
 """ 
     Proof of concept decryption and encryption of SecureChatAnywhere data which
     uses AES-128/CBC/PKCS7Padding with Base64 encoding.
@@ -68,6 +70,6 @@ if __name__== "__main__":
     plaintext = key.decrypt(ciphertext)
     print ("decrypted: %s" % plaintext)
     # encrypt with new random iv, ct != ciphertext
-    pt = "hello modrobert"
+    pt = "hello bobchomp"
     ct = key.encrypt(pt)
     print ("encrypted: SCA-" + ct)
