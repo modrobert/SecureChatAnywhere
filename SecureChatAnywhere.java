@@ -53,7 +53,7 @@ import java.io.*;
 public class SecureChatAnywhere {
 
     public static final String APP_VERSION =
-        "SecureChatAnywhere v0.98 Beta [AES-128/CBC]";
+        "SecureChatAnywhere v0.99 Beta [AES-128/CBC]";
     public static final String MAGIC_ID = "SCA-";
     private static final String KEY_FILE = "SecureChatAnywhere.keys.txt";
     private static final String KEY_WARNING =
