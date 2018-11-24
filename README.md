@@ -45,6 +45,7 @@ For example (but not limited to):
 
 * Gmail
 * Hotmail (Outlook)
+* ProtonMail
 * Twitter
 * Google Plus
 * Facebook
