@@ -4,7 +4,7 @@
  
 ## Encrypts/decrypts chat messages with AES-128/CBC.
 
-### Copyright (C) 2018  Robert V. <modrobert@gmail.com>
+### Copyright (C) 2018  Robert V. &lt;modrobert@gmail.com&gt;
 ### Software licensed under GPLv3.
 
 ---
@@ -372,7 +372,7 @@ with no dependencies besides native JRE, so keep that in mind.
 ### License
 
 SecureChatAnywhere encrypts/decrypts chat messages with AES-128/CBC.  
-Copyright (C) 2018  Robert V. <modrobert@gmail.com>
+Copyright (C) 2018  Robert V. &lt;modrobert@gmail.com&gt;
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -385,5 +385,5 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+along with this program.  If not, see &lt;https://www.gnu.org/licenses/&gt;.
 
