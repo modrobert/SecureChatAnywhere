@@ -356,8 +356,6 @@ Bitcoin: 1LdBPjasAMLSBUEMF4w4AGuyPBBTtDZ92H
 Litecoin: Ld8dHjjh5YGXTiWrP3eenNTDXqB5pYpPqb  
 Bitcoin Cash (bcash): 1E2juHw762hCKpPmJpiBaRaiefgsTqsqeZ
 
-PayPal: https://paypal.me/modrobert
-
 If you want to help by providing code fixes or adding minor functionality then
 you are welcome to fork this project and create a "pull request" which will be
 reviewed and "pulled" if approved.
