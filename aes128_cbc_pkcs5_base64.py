@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 
 """ 
     Proof of concept decryption and encryption of SecureChatAnywhere data which
@@ -27,28 +27,30 @@
 
 from base64 import b64decode
 from base64 import b64encode
+from base64 import b16decode
 from Crypto.Cipher import AES
 from Crypto import Random
 
 BS = 16
 
 # PKCS5Padding = PKCS7Padding for AES in java land
-pad = lambda s: s + (BS - len(s) % BS) * chr(BS - len(s) % BS)
-unpad = lambda s: s[0:-ord(s[-1])]
+pad = lambda s: bytes(s + (BS - len(s) % BS) * chr(BS - len(s) % BS), "utf-8")
+unpad = lambda s: s[0 : -(s[-1])]
+
 
 class AESCipher:
     def __init__(self, key):
         """
         Requires hex encoded param as a key
         """
-        self.key = key.decode("hex")
+        self.key = b16decode(key.upper())
 
     def encrypt(self, plaintext):
         """
         Returns Base64 encoded encrypted string
         """
         plaintext = pad(plaintext)
-        iv = Random.new().read(AES.block_size);
+        iv = Random.new().read(AES.block_size)
         cipher = AES.new(self.key, AES.MODE_CBC, iv)
         return b64encode(iv + cipher.encrypt(plaintext))
 
@@ -57,19 +59,20 @@ class AESCipher:
         Requires bytearray to decrypt
         """
         iv = enc[:16]
-        enc= enc[16:]
+        enc = enc[16:]
         cipher = AES.new(self.key, AES.MODE_CBC, iv)
         return unpad(cipher.decrypt(enc))
 
-if __name__== "__main__":
+
+if __name__ == "__main__":
     hexkey = "76c1019d7c3b70309e97a637088895b8"
-    ciphertext = "SCA-dRWopUwYadNur3d0x4MffKReiKWLor+R9VSf4vFypME=";
+    ciphertext = "SCA-dRWopUwYadNur3d0x4MffKReiKWLor+R9VSf4vFypME="
     ciphertext = b64decode(ciphertext[4:])
     key = AESCipher(hexkey)
     # decrypt
     plaintext = key.decrypt(ciphertext)
-    print ("decrypted: %s" % plaintext)
+    print("decrypted: %s" % plaintext)
     # encrypt with new random iv, ct != ciphertext
     pt = "hello bobchomp"
     ct = key.encrypt(pt)
-    print ("encrypted: SCA-" + ct)
+    print("encrypted: SCA-" + ct.decode("utf-8"))
