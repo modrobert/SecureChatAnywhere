@@ -71,7 +71,7 @@ if __name__ == "__main__":
     key = AESCipher(hexkey)
     # decrypt
     plaintext = key.decrypt(ciphertext)
-    print("decrypted: %s" % plaintext)
+    print("decrypted: %s" % plaintext.decode("utf-8"))
     # encrypt with new random iv, ct != ciphertext
     pt = "hello bobchomp"
     ct = key.encrypt(pt)
