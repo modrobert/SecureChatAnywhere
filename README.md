@@ -119,7 +119,7 @@ key to a group of people, it all depends on who you want to be able to decrypt
 your messages.
 
 SecureChatAnywhere allows you to create a label for each key used and it is
-stored in the plain text file SecureChatAnywhere.key.txt. The file format is
+stored in the plain text file SecureChatAnywhere.keys.txt. The file format is
 simple, one line/row for each key, in the format 'name=aabbccddeeff001122..',
 when using the tool the name of the unique key (label) will be used, not
 mentioning the actual key except when using key related functions in the
@@ -131,7 +131,7 @@ sequences for the key label I advice against it because it breaks the sorting
 of the keys. You can however use UTF-8 characters when encrypting chat messages
 which will be decrypted correctly.
 
-If you do changes to the SecureChatAnywhere.key.txt file you need to quit the
+If you do changes to the SecureChatAnywhere.keys.txt file you need to quit the
 program and restart it for the changes to take effect. This is something I
 hope to improve in future versions of the program, but for now, lets keep it
 simple.
