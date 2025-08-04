@@ -48,6 +48,7 @@ For example (but not limited to):
 * ProtonMail
 * Discord
 * X (Twitter)
+* Mastodon
 * Bluesky
 * Facebook
 * Line
