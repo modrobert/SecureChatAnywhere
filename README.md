@@ -46,18 +46,17 @@ For example (but not limited to):
 * Gmail
 * Hotmail (Outlook)
 * ProtonMail
-* Twitter
-* Google Plus
+* Discord
+* X (Twitter)
+* Bluesky
 * Facebook
-* Skype
 * Line
 * Wire
 * WhatsApp
 * Telegram
 * Signal
+* Steam Chat
 * IRC
-* Discord
-* Steam
 
 ---
 
