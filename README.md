@@ -323,6 +323,12 @@ cryptographic core where all plaintext input and output has to be controlled by
 the device and the smartphone app only handles ciphertext where no trust is
 required. When or if I ever finish this project it will be released as open
 hardware design.
+<br>
+<br>
+Q: Why are you using AES/CBC which is susceptible to padding oracle attacks?
+
+A: There is no "oracle" in this case, and the IV is selected by random each
+time.
 
 ---
 
